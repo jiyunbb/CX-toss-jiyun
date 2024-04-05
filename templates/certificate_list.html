@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>송금확인증 목록</h1>
+<ul>
+    <li>송금확인증 ID: {{ certificate.id }}</li>
+    <li>유저 ID: {{ certificate.user.id }}</li>
+    <li>유저명: {{ certificate.user.name }}</li>
+    <li>송금확인증 상태: {{ certificate.status }}</li>
+    <li> -- 대상 송금 ID 목록 --</li>
+    <ul>
+        {% for transfer_id in certificate.transfers %}
+            <li>{{ transfer_id }}</li>
+        {% endfor %}
+    </ul>
+</ul>
+</body>
+</html>
