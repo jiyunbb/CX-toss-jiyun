@@ -9,7 +9,6 @@ class User(models.Model):
 
     class Meta:
         verbose_name = '유저'
-        app_label = 'certificates'
         db_table = 'user'
 
 
@@ -20,7 +19,6 @@ class Transfer(models.Model):
 
     class Meta:
         verbose_name = '송금내역'
-        app_label = 'certificates'
         db_table = 'transfer'
 
 
@@ -36,7 +34,6 @@ class Certificate(models.Model):
 
     class Meta:
         verbose_name = '송금확인증'
-        app_label = 'certificates'
         db_table = 'certificate'
 
 
@@ -50,5 +47,4 @@ class CertificateTransferMap(models.Model):
 
     class Meta:
         verbose_name = '송금 확인증 매핑 테이블'
-        app_label = 'certificates'
         db_table = 'certificate_transfer_map'
